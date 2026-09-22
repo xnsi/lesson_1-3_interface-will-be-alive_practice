@@ -76,7 +76,14 @@ cards.forEach((card) => {
 // 08. Напишете функцию showEvent(card) и возьмете данные из HTML.
 const detailsDescription = document.querySelector("#details-description");
 const detailsTime = document.querySelector("#details-time");
+let selectedCard = null;
 function showEvent(card) {
+  if (selectedCard !== null) {
+    selectedCard.classList.remove("event-card--selected");
+  }
+  selectedCard = card;
+  selectedCard.classList.add("event-card--selected");
+  document.querySelector("#event-details").style.setProperty("--accent", card.dataset.accent);
   detailsTitle.textContent = card.dataset.title;
   detailsDescription.textContent = card.dataset.description;
   detailsTime.textContent = card.dataset.time;
