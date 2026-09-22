@@ -59,6 +59,9 @@ secondCard.addEventListener("click", () => {
 });
 
 // 06. Сравните учебный массив с коллекцией карточек из DOM.
+const cards = document.querySelectorAll(".event-card");
+const eventCount = document.querySelector("#event-count");
+eventCount.textContent = cards.length;
 
 // 07. Обойдете все карточки циклом. В этом месте временно могут
 // сосуществовать старые и новые обработчики; в задании 08 вы
