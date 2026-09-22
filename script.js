@@ -26,8 +26,21 @@ const labStatus = document.querySelector("#lab-status");
 // });
 
 // 03
+// const eventName = "Город в деталях";
+// let clickCount = 0;
+// firstCard.addEventListener("click", () => {
+//   clickCount = clickCount + 1;
+//   if (clickCount === 1) {
+//     labStatus.textContent = `Первое открытие: ${eventName}`;
+//   } else {
+//     labStatus.textContent = `Повторное открытие: ${eventName}`;
+//   }
+// });
+
+// 04–05. Найдете элементы панели и подключите вторую карточку.
 const eventName = "Город в деталях";
 let clickCount = 0;
+const detailsTitle = document.querySelector("#details-title");
 firstCard.addEventListener("click", () => {
   clickCount = clickCount + 1;
   if (clickCount === 1) {
@@ -35,9 +48,8 @@ firstCard.addEventListener("click", () => {
   } else {
     labStatus.textContent = `Повторное открытие: ${eventName}`;
   }
+  detailsTitle.textContent = eventName;
 });
-
-// 04–05. Найдете элементы панели и подключите вторую карточку.
 
 // 06. Сравните учебный массив с коллекцией карточек из DOM.
 
