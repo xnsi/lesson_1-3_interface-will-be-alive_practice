@@ -92,3 +92,12 @@ function showEvent(card) {
 // 09. Добавите выбранное состояние, акцент и CSS-анимацию.
 
 // 10. Самостоятельно оживите кнопку «Удиви меня».
+const surpriseButton = document.querySelector("#surprise-button");
+
+surpriseButton.addEventListener("click", () => {
+  const availableCards = [...cards].filter((card) => card !== selectedCard);
+  const randomIndex = Math.floor(Math.random() * availableCards.length);
+  const randomCard = availableCards[randomIndex];
+
+  showEvent(randomCard);
+});
