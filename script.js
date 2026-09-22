@@ -9,14 +9,21 @@ const labStatus = document.querySelector("#lab-status");
 // 01. Уберите /* и */ вокруг обработчика, сохраните файл и нажмите
 // первую карточку. Потом переходите к заданию 02 в TASKS.md.
 
-firstCard.addEventListener("click", () => {
-  labStatus.textContent = "Открыта первая карточка";
-});
-
+// firstCard.addEventListener("click", () => {
+//   labStatus.textContent = "Открыта первая карточка";
+// });
 
 // 02–03. Вы будете постепенно менять обработчик выше: добавите
 // переменные, счетчик нажатий и условие. Не создавайте второй
 // обработчик для той же карточки, пока не разобрались с первым.
+
+// 02
+const eventName = "Город в деталях";
+let clickCount = 0;
+firstCard.addEventListener("click", () => {
+  clickCount = clickCount + 1;
+  labStatus.textContent = `${eventName}: нажатий ${clickCount}`;
+});
 
 // 04–05. Найдете элементы панели и подключите вторую карточку.
 
@@ -27,7 +34,7 @@ firstCard.addEventListener("click", () => {
 // удалите временные и оставите один общий путь обработки клика.
 
 // 08. Напишете функцию showEvent(card) и возьмете данные из HTML.
-~
+
 // 09. Добавите выбранное состояние, акцент и CSS-анимацию.
 
 // 10. Самостоятельно оживите кнопку «Удиви меня».
