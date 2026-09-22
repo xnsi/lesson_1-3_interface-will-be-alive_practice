@@ -51,6 +51,13 @@ firstCard.addEventListener("click", () => {
   detailsTitle.textContent = eventName;
 });
 
+// 05
+const secondCard = document.querySelector('[data-event="workshop"]');
+const secondEventName = "Мастерская постеров";
+secondCard.addEventListener("click", () => {
+  detailsTitle.textContent = secondEventName;
+});
+
 // 06. Сравните учебный массив с коллекцией карточек из DOM.
 
 // 07. Обойдете все карточки циклом. В этом месте временно могут
