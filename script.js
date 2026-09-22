@@ -38,25 +38,25 @@ const labStatus = document.querySelector("#lab-status");
 // });
 
 // 04–05. Найдете элементы панели и подключите вторую карточку.
-const eventName = "Город в деталях";
-let clickCount = 0;
+// const eventName = "Город в деталях";
+// let clickCount = 0;
 const detailsTitle = document.querySelector("#details-title");
-firstCard.addEventListener("click", () => {
-  clickCount = clickCount + 1;
-  // if (clickCount === 1) {
-  //   labStatus.textContent = `Первое открытие: ${eventName}`;
-  // } else {
-  //   labStatus.textContent = `Повторное открытие: ${eventName}`;
-  // }
-  detailsTitle.textContent = eventName;
-});
+// firstCard.addEventListener("click", () => {
+//   clickCount = clickCount + 1;
+//   // if (clickCount === 1) {
+//   //   labStatus.textContent = `Первое открытие: ${eventName}`;
+//   // } else {
+//   //   labStatus.textContent = `Повторное открытие: ${eventName}`;
+//   // }
+//   detailsTitle.textContent = eventName;
+// });
 
 // 05
-const secondCard = document.querySelector('[data-event="workshop"]');
-const secondEventName = "Мастерская постеров";
-secondCard.addEventListener("click", () => {
-  detailsTitle.textContent = secondEventName;
-});
+// const secondCard = document.querySelector('[data-event="workshop"]');
+// const secondEventName = "Мастерская постеров";
+// secondCard.addEventListener("click", () => {
+//   detailsTitle.textContent = secondEventName;
+// });
 
 // 06. Сравните учебный массив с коллекцией карточек из DOM.
 const cards = document.querySelectorAll(".event-card");
@@ -68,11 +68,19 @@ eventCount.textContent = cards.length;
 // удалите временные и оставите один общий путь обработки клика.
 cards.forEach((card) => {
   card.addEventListener("click", () => {
-    labStatus.textContent = "Нажата карточка из программы";
+    //labStatus.textContent = "Нажата карточка из программы";
+    showEvent(card);
   });
 });
 
 // 08. Напишете функцию showEvent(card) и возьмете данные из HTML.
+const detailsDescription = document.querySelector("#details-description");
+const detailsTime = document.querySelector("#details-time");
+function showEvent(card) {
+  detailsTitle.textContent = card.dataset.title;
+  detailsDescription.textContent = card.dataset.description;
+  detailsTime.textContent = card.dataset.time;
+}
 
 // 09. Добавите выбранное состояние, акцент и CSS-анимацию.
 
